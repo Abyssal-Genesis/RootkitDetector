@@ -1,0 +1,2113 @@
+{
+  "scan_time_iso": "2026-04-20T10:38:01.329940+00:00",
+  "total_alerts": 45,
+  "total_incidents": 45,
+  "dedup_suppressed": 0,
+  "campaigns": [
+    {
+      "campaign_id": "PROC_150",
+      "incident_count": 2,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "DKOM/UID_ANOMALY",
+          "severity": "HIGH",
+          "detail": "pid_15_has_root_uid_euid=0",
+          "source": "improved_dkom",
+          "mitre_ttp": "T1055.012",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "DKOM/ZERO_PPID",
+          "severity": "HIGH",
+          "detail": "pid_15_has_ppid=0_not_init_or_kthreadd",
+          "source": "improved_dkom",
+          "mitre_ttp": "T1014",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T1055.012"
+    },
+    {
+      "campaign_id": "PROC_47490",
+      "incident_count": 2,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "DKOM/UID_ANOMALY",
+          "severity": "HIGH",
+          "detail": "pid_4749_has_root_uid_euid=0",
+          "source": "improved_dkom",
+          "mitre_ttp": "T1055.012",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "DKOM/ZERO_PPID",
+          "severity": "HIGH",
+          "detail": "pid_4749_has_ppid=0_not_init_or_kthreadd",
+          "source": "improved_dkom",
+          "mitre_ttp": "T1014",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T1055.012"
+    },
+    {
+      "campaign_id": "PROC_68360",
+      "incident_count": 2,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "DKOM/UID_ANOMALY",
+          "severity": "HIGH",
+          "detail": "pid_6836_has_root_uid_euid=0",
+          "source": "improved_dkom",
+          "mitre_ttp": "T1055.012",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "DKOM/ZERO_PPID",
+          "severity": "HIGH",
+          "detail": "pid_6836_has_ppid=0_not_init_or_kthreadd",
+          "source": "improved_dkom",
+          "mitre_ttp": "T1014",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T1055.012"
+    },
+    {
+      "campaign_id": "PROCESS_ANOMALY",
+      "incident_count": 2,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "MEDIUM",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 67 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+          "pid": 67,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:67",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T0000"
+    },
+    {
+      "campaign_id": "PROCESS_ANOMALY",
+      "incident_count": 3,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "MEDIUM",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 67 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+          "pid": 67,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:67",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T0000"
+    },
+    {
+      "campaign_id": "PROCESS_ANOMALY",
+      "incident_count": 4,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "MEDIUM",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 67 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+          "pid": 67,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:67",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 4780 (nuclei) \u2014 nuclei",
+          "detail": "Suspicious cmdline pattern matched '/tmp/': /usr/local/bin/nuclei -u marketplace.atlassian.com -jsonl -silent -je /tmp/nucle",
+          "pid": 4780,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:4780",
+            "nuclei"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T0000"
+    },
+    {
+      "campaign_id": "PROCESS_ANOMALY",
+      "incident_count": 5,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "MEDIUM",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 67 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+          "pid": 67,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:67",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 4780 (nuclei) \u2014 nuclei",
+          "detail": "Suspicious cmdline pattern matched '/tmp/': /usr/local/bin/nuclei -u marketplace.atlassian.com -jsonl -silent -je /tmp/nucle",
+          "pid": 4780,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:4780",
+            "nuclei"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6836 (sh) \u2014 sh",
+          "detail": "Suspicious cmdline pattern matched 'curl': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+          "pid": 6836,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6836",
+            "sh"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T0000"
+    },
+    {
+      "campaign_id": "PROCESS_ANOMALY",
+      "incident_count": 6,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "MEDIUM",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 67 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+          "pid": 67,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:67",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 4780 (nuclei) \u2014 nuclei",
+          "detail": "Suspicious cmdline pattern matched '/tmp/': /usr/local/bin/nuclei -u marketplace.atlassian.com -jsonl -silent -je /tmp/nucle",
+          "pid": 4780,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:4780",
+            "nuclei"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6836 (sh) \u2014 sh",
+          "detail": "Suspicious cmdline pattern matched 'curl': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+          "pid": 6836,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6836",
+            "sh"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6859 (curl) \u2014 curl",
+          "detail": "Suspicious cmdline pattern matched 'curl': curl -s -X POST http://localhost:3099/api/rootkit/full -H Content-Type: applicat",
+          "pid": 6859,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6859",
+            "curl"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T0000"
+    },
+    {
+      "campaign_id": "PROCESS_ANOMALY",
+      "incident_count": 7,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "MEDIUM",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 67 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+          "pid": 67,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:67",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 4780 (nuclei) \u2014 nuclei",
+          "detail": "Suspicious cmdline pattern matched '/tmp/': /usr/local/bin/nuclei -u marketplace.atlassian.com -jsonl -silent -je /tmp/nucle",
+          "pid": 4780,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:4780",
+            "nuclei"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6836 (sh) \u2014 sh",
+          "detail": "Suspicious cmdline pattern matched 'curl': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+          "pid": 6836,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6836",
+            "sh"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6859 (curl) \u2014 curl",
+          "detail": "Suspicious cmdline pattern matched 'curl': curl -s -X POST http://localhost:3099/api/rootkit/full -H Content-Type: applicat",
+          "pid": 6859,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6859",
+            "curl"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6860 (python3) \u2014 python3",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': python3 -c import sys,json; d=json.load(sys.stdin); print('exit',d.get('exit_cod",
+          "pid": 6860,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6860",
+            "python3"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T0000"
+    },
+    {
+      "campaign_id": "PROCESS_ANOMALY",
+      "incident_count": 8,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "MEDIUM",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 67 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+          "pid": 67,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:67",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 4780 (nuclei) \u2014 nuclei",
+          "detail": "Suspicious cmdline pattern matched '/tmp/': /usr/local/bin/nuclei -u marketplace.atlassian.com -jsonl -silent -je /tmp/nucle",
+          "pid": 4780,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:4780",
+            "nuclei"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6836 (sh) \u2014 sh",
+          "detail": "Suspicious cmdline pattern matched 'curl': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+          "pid": 6836,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6836",
+            "sh"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6859 (curl) \u2014 curl",
+          "detail": "Suspicious cmdline pattern matched 'curl': curl -s -X POST http://localhost:3099/api/rootkit/full -H Content-Type: applicat",
+          "pid": 6859,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6859",
+            "curl"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6860 (python3) \u2014 python3",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': python3 -c import sys,json; d=json.load(sys.stdin); print('exit',d.get('exit_cod",
+          "pid": 6860,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6860",
+            "python3"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 6861 (python3) \u2014 python3",
+          "detail": "Suspicious cmdline pattern matched 'tor': python3 /home/workspace/RootkitDetector/rootkit_detector.py ",
+          "pid": 6861,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:6861",
+            "python3"
+          ],
+          "source": "linux_process_detector",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T0000"
+    },
+    {
+      "campaign_id": "HOOK_SUSPICIOUS_MAPPING",
+      "incident_count": 2,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "type": "HOOK_SUSPICIOUS_MAPPING",
+          "module": "ELFHook",
+          "severity": "HIGH",
+          "title": "Non-system ELF mapped at 003ff000-00400000: /usr/local/bin/python3",
+          "detail": "Non-system ELF mapped at 003ff000-00400000: /usr/local/bin/python3",
+          "fix": "Inspect with: readelf -s <binary>; cat /proc/<pid>/maps",
+          "objects": [],
+          "source": "elf_hook_scanner",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        },
+        {
+          "type": "HOOK_SUSPICIOUS_MAPPING",
+          "module": "ELFHook",
+          "severity": "HIGH",
+          "title": "Non-system ELF mapped at 2adf40000000-2adf4021c000: /usr/local/lib/libpython3.12",
+          "detail": "Non-system ELF mapped at 2adf40000000-2adf4021c000: /usr/local/lib/libpython3.12.so.1.0",
+          "fix": "Inspect with: readelf -s <binary>; cat /proc/<pid>/maps",
+          "objects": [],
+          "source": "elf_hook_scanner",
+          "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+        }
+      ],
+      "ttp": "T0000"
+    }
+  ],
+  "system_info": {
+    "kernel": "4.4.0",
+    "hostname": "modal",
+    "detector_binary": "sha256:d9bbd920cced4910",
+    "detector_config": "sha256:42114d1b58824132",
+    "platform": "Linux x86_64"
+  },
+  "incidents": [
+    {
+      "incident_id": 1,
+      "type": "DKOM/PID_GAP_CLUSTER",
+      "detail": "large_pid_gaps_found_11_gaps_over_10_pids",
+      "target": "large_pid_gaps_found_11_gaps_over_10_pids",
+      "severity": "CRITICAL",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329494+00:00",
+      "timestamp_ns": 1776681481329493504,
+      "severity_score": 90,
+      "campaign_id": "PROC_1110",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/PID_GAP_CLUSTER",
+        "severity": "CRITICAL",
+        "detail": "large_pid_gaps_found_11_gaps_over_10_pids",
+        "source": "improved_dkom",
+        "gaps": [
+          [
+            2,
+            15,
+            13
+          ],
+          [
+            15,
+            67,
+            52
+          ],
+          [
+            69,
+            93,
+            24
+          ],
+          [
+            98,
+            159,
+            61
+          ],
+          [
+            159,
+            180,
+            21
+          ],
+          [
+            180,
+            195,
+            15
+          ],
+          [
+            195,
+            4749,
+            4554
+          ],
+          [
+            4753,
+            4780,
+            27
+          ],
+          [
+            4780,
+            6810,
+            2030
+          ],
+          [
+            6810,
+            6836,
+            26
+          ],
+          [
+            6837,
+            6859,
+            22
+          ]
+        ],
+        "mitre_ttp": "T1014",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 2,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_2_has_root_uid_euid=0",
+      "target": "pid_2_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329548+00:00",
+      "timestamp_ns": 1776681481329547776,
+      "severity_score": 60,
+      "campaign_id": "PROC_20",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_2_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 3,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_15_has_root_uid_euid=0",
+      "target": "pid_15_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329564+00:00",
+      "timestamp_ns": 1776681481329563648,
+      "severity_score": 60,
+      "campaign_id": "PROC_150",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_15_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 4,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_67_has_root_uid_euid=0",
+      "target": "pid_67_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329577+00:00",
+      "timestamp_ns": 1776681481329577216,
+      "severity_score": 60,
+      "campaign_id": "PROC_670",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_67_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 5,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_69_has_root_uid_euid=0",
+      "target": "pid_69_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329586+00:00",
+      "timestamp_ns": 1776681481329586176,
+      "severity_score": 60,
+      "campaign_id": "PROC_690",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_69_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 6,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_93_has_root_uid_euid=0",
+      "target": "pid_93_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329595+00:00",
+      "timestamp_ns": 1776681481329594624,
+      "severity_score": 60,
+      "campaign_id": "PROC_930",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_93_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 7,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_94_has_root_uid_euid=0",
+      "target": "pid_94_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329602+00:00",
+      "timestamp_ns": 1776681481329602560,
+      "severity_score": 60,
+      "campaign_id": "PROC_940",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_94_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 8,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_95_has_root_uid_euid=0",
+      "target": "pid_95_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329612+00:00",
+      "timestamp_ns": 1776681481329612288,
+      "severity_score": 60,
+      "campaign_id": "PROC_950",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_95_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 9,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_96_has_root_uid_euid=0",
+      "target": "pid_96_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329619+00:00",
+      "timestamp_ns": 1776681481329619200,
+      "severity_score": 60,
+      "campaign_id": "PROC_960",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_96_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 10,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_97_has_root_uid_euid=0",
+      "target": "pid_97_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329626+00:00",
+      "timestamp_ns": 1776681481329626368,
+      "severity_score": 60,
+      "campaign_id": "PROC_970",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_97_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 11,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_98_has_root_uid_euid=0",
+      "target": "pid_98_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329633+00:00",
+      "timestamp_ns": 1776681481329633280,
+      "severity_score": 60,
+      "campaign_id": "PROC_980",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_98_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 12,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_180_has_root_uid_euid=0",
+      "target": "pid_180_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329643+00:00",
+      "timestamp_ns": 1776681481329643008,
+      "severity_score": 60,
+      "campaign_id": "PROC_1800",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_180_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 13,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_195_has_root_uid_euid=0",
+      "target": "pid_195_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329650+00:00",
+      "timestamp_ns": 1776681481329650432,
+      "severity_score": 60,
+      "campaign_id": "PROC_1950",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_195_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 14,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_4749_has_root_uid_euid=0",
+      "target": "pid_4749_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329657+00:00",
+      "timestamp_ns": 1776681481329657344,
+      "severity_score": 60,
+      "campaign_id": "PROC_47490",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_4749_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 15,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_4752_has_root_uid_euid=0",
+      "target": "pid_4752_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329664+00:00",
+      "timestamp_ns": 1776681481329664512,
+      "severity_score": 60,
+      "campaign_id": "PROC_47520",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_4752_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 16,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_4753_has_root_uid_euid=0",
+      "target": "pid_4753_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329671+00:00",
+      "timestamp_ns": 1776681481329671168,
+      "severity_score": 60,
+      "campaign_id": "PROC_47530",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_4753_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 17,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_4780_has_root_uid_euid=0",
+      "target": "pid_4780_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329678+00:00",
+      "timestamp_ns": 1776681481329678336,
+      "severity_score": 60,
+      "campaign_id": "PROC_47800",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_4780_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 18,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_6810_has_root_uid_euid=0",
+      "target": "pid_6810_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329685+00:00",
+      "timestamp_ns": 1776681481329685504,
+      "severity_score": 60,
+      "campaign_id": "PROC_68100",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_6810_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 19,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_6836_has_root_uid_euid=0",
+      "target": "pid_6836_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329692+00:00",
+      "timestamp_ns": 1776681481329692416,
+      "severity_score": 60,
+      "campaign_id": "PROC_68360",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_6836_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 20,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_6837_has_root_uid_euid=0",
+      "target": "pid_6837_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329699+00:00",
+      "timestamp_ns": 1776681481329699328,
+      "severity_score": 60,
+      "campaign_id": "PROC_68370",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_6837_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 21,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_6859_has_root_uid_euid=0",
+      "target": "pid_6859_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329706+00:00",
+      "timestamp_ns": 1776681481329705984,
+      "severity_score": 60,
+      "campaign_id": "PROC_68590",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_6859_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 22,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_6860_has_root_uid_euid=0",
+      "target": "pid_6860_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329715+00:00",
+      "timestamp_ns": 1776681481329714688,
+      "severity_score": 60,
+      "campaign_id": "PROC_68600",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_6860_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 23,
+      "type": "DKOM/UID_ANOMALY",
+      "detail": "pid_6861_has_root_uid_euid=0",
+      "target": "pid_6861_has_root_uid_euid=0",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329724+00:00",
+      "timestamp_ns": 1776681481329723904,
+      "severity_score": 60,
+      "campaign_id": "PROC_68610",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "pid_6861_has_root_uid_euid=0",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1055.012",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 24,
+      "type": "DKOM/ZERO_PPID",
+      "detail": "pid_15_has_ppid=0_not_init_or_kthreadd",
+      "target": "pid_15_has_ppid=0_not_init_or_kthreadd",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329732+00:00",
+      "timestamp_ns": 1776681481329731840,
+      "severity_score": 60,
+      "campaign_id": "PROC_150",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/ZERO_PPID",
+        "severity": "HIGH",
+        "detail": "pid_15_has_ppid=0_not_init_or_kthreadd",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1014",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 25,
+      "type": "DKOM/ZERO_PPID",
+      "detail": "pid_4749_has_ppid=0_not_init_or_kthreadd",
+      "target": "pid_4749_has_ppid=0_not_init_or_kthreadd",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329741+00:00",
+      "timestamp_ns": 1776681481329740800,
+      "severity_score": 60,
+      "campaign_id": "PROC_47490",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/ZERO_PPID",
+        "severity": "HIGH",
+        "detail": "pid_4749_has_ppid=0_not_init_or_kthreadd",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1014",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 26,
+      "type": "DKOM/ZERO_PPID",
+      "detail": "pid_6836_has_ppid=0_not_init_or_kthreadd",
+      "target": "pid_6836_has_ppid=0_not_init_or_kthreadd",
+      "severity": "HIGH",
+      "mitre_ttp": "T1055.012",
+      "source_module": "improved_dkom",
+      "timestamp_iso": "2026-04-20T10:38:01.329749+00:00",
+      "timestamp_ns": 1776681481329748736,
+      "severity_score": 60,
+      "campaign_id": "PROC_68360",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DKOM/ZERO_PPID",
+        "severity": "HIGH",
+        "detail": "pid_6836_has_ppid=0_not_init_or_kthreadd",
+        "source": "improved_dkom",
+        "mitre_ttp": "T1014",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 27,
+      "type": "HIDDEN_PROCESS",
+      "detail": "cmdline=unknown",
+      "target": "cmdline=unknown",
+      "severity": "CRITICAL",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329756+00:00",
+      "timestamp_ns": 1776681481329756416,
+      "severity_score": 90,
+      "campaign_id": "HIDDEN_PROCESS",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "HIDDEN_PROCESS",
+        "module": "LinuxProcess",
+        "severity": "CRITICAL",
+        "title": "Hidden process PID 6864",
+        "detail": "cmdline=unknown",
+        "pid": 6864,
+        "fix": "Run 'cat /proc/PID/status' \u2014 if inaccessible, process may be DKOM-hidden",
+        "objects": [
+          "pid:6864",
+          "unknown"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 28,
+      "type": "PROCESS_ANOMALY",
+      "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+      "target": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+      "severity": "MEDIUM",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329774+00:00",
+      "timestamp_ns": 1776681481329773568,
+      "severity_score": 30,
+      "campaign_id": "PROCESS_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "PROCESS_ANOMALY",
+        "module": "LinuxProcess",
+        "severity": "MEDIUM",
+        "title": "PID 69 (supervisord) \u2014 supervisord",
+        "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+        "pid": 69,
+        "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+        "objects": [
+          "pid:69",
+          "supervisord"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 29,
+      "type": "PROCESS_ANOMALY",
+      "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+      "target": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329784+00:00",
+      "timestamp_ns": 1776681481329783808,
+      "severity_score": 60,
+      "campaign_id": "PROCESS_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "PROCESS_ANOMALY",
+        "module": "LinuxProcess",
+        "severity": "HIGH",
+        "title": "PID 67 (supervisord) \u2014 supervisord",
+        "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+        "pid": 67,
+        "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+        "objects": [
+          "pid:67",
+          "supervisord"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 30,
+      "type": "PROCESS_ANOMALY",
+      "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+      "target": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329793+00:00",
+      "timestamp_ns": 1776681481329793024,
+      "severity_score": 60,
+      "campaign_id": "PROCESS_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "PROCESS_ANOMALY",
+        "module": "LinuxProcess",
+        "severity": "HIGH",
+        "title": "PID 69 (supervisord) \u2014 supervisord",
+        "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+        "pid": 69,
+        "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+        "objects": [
+          "pid:69",
+          "supervisord"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 31,
+      "type": "PROCESS_ANOMALY",
+      "detail": "Suspicious cmdline pattern matched '/tmp/': /usr/local/bin/nuclei -u marketplace.atlassian.com -jsonl -silent -je /tmp/nucle",
+      "target": "Suspicious cmdline pattern matched '/tmp/': /usr/local/bin/nuclei -u marketplace.atlassian.com -jsonl -silent -je /tmp/nucle",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329801+00:00",
+      "timestamp_ns": 1776681481329801216,
+      "severity_score": 60,
+      "campaign_id": "PROCESS_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "PROCESS_ANOMALY",
+        "module": "LinuxProcess",
+        "severity": "HIGH",
+        "title": "PID 4780 (nuclei) \u2014 nuclei",
+        "detail": "Suspicious cmdline pattern matched '/tmp/': /usr/local/bin/nuclei -u marketplace.atlassian.com -jsonl -silent -je /tmp/nucle",
+        "pid": 4780,
+        "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+        "objects": [
+          "pid:4780",
+          "nuclei"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 32,
+      "type": "PROCESS_ANOMALY",
+      "detail": "Suspicious cmdline pattern matched 'curl': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+      "target": "Suspicious cmdline pattern matched 'curl': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329809+00:00",
+      "timestamp_ns": 1776681481329808896,
+      "severity_score": 60,
+      "campaign_id": "PROCESS_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "PROCESS_ANOMALY",
+        "module": "LinuxProcess",
+        "severity": "HIGH",
+        "title": "PID 6836 (sh) \u2014 sh",
+        "detail": "Suspicious cmdline pattern matched 'curl': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+        "pid": 6836,
+        "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+        "objects": [
+          "pid:6836",
+          "sh"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 33,
+      "type": "PROCESS_ANOMALY",
+      "detail": "Suspicious cmdline pattern matched 'curl': curl -s -X POST http://localhost:3099/api/rootkit/full -H Content-Type: applicat",
+      "target": "Suspicious cmdline pattern matched 'curl': curl -s -X POST http://localhost:3099/api/rootkit/full -H Content-Type: applicat",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329816+00:00",
+      "timestamp_ns": 1776681481329816320,
+      "severity_score": 60,
+      "campaign_id": "PROCESS_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "PROCESS_ANOMALY",
+        "module": "LinuxProcess",
+        "severity": "HIGH",
+        "title": "PID 6859 (curl) \u2014 curl",
+        "detail": "Suspicious cmdline pattern matched 'curl': curl -s -X POST http://localhost:3099/api/rootkit/full -H Content-Type: applicat",
+        "pid": 6859,
+        "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+        "objects": [
+          "pid:6859",
+          "curl"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 34,
+      "type": "PROCESS_ANOMALY",
+      "detail": "Suspicious cmdline pattern matched 'python.*-c': python3 -c import sys,json; d=json.load(sys.stdin); print('exit',d.get('exit_cod",
+      "target": "Suspicious cmdline pattern matched 'python.*-c': python3 -c import sys,json; d=json.load(sys.stdin); print('exit',d.get('exit_cod",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329827+00:00",
+      "timestamp_ns": 1776681481329826560,
+      "severity_score": 60,
+      "campaign_id": "PROCESS_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "PROCESS_ANOMALY",
+        "module": "LinuxProcess",
+        "severity": "HIGH",
+        "title": "PID 6860 (python3) \u2014 python3",
+        "detail": "Suspicious cmdline pattern matched 'python.*-c': python3 -c import sys,json; d=json.load(sys.stdin); print('exit',d.get('exit_cod",
+        "pid": 6860,
+        "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+        "objects": [
+          "pid:6860",
+          "python3"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 35,
+      "type": "PROCESS_ANOMALY",
+      "detail": "Suspicious cmdline pattern matched 'tor': python3 /home/workspace/RootkitDetector/rootkit_detector.py ",
+      "target": "Suspicious cmdline pattern matched 'tor': python3 /home/workspace/RootkitDetector/rootkit_detector.py ",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "linux_process_detector",
+      "timestamp_iso": "2026-04-20T10:38:01.329834+00:00",
+      "timestamp_ns": 1776681481329833984,
+      "severity_score": 60,
+      "campaign_id": "PROCESS_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "PROCESS_ANOMALY",
+        "module": "LinuxProcess",
+        "severity": "HIGH",
+        "title": "PID 6861 (python3) \u2014 python3",
+        "detail": "Suspicious cmdline pattern matched 'tor': python3 /home/workspace/RootkitDetector/rootkit_detector.py ",
+        "pid": 6861,
+        "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+        "objects": [
+          "pid:6861",
+          "python3"
+        ],
+        "source": "linux_process_detector",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 36,
+      "type": "HOOK_VDSO_PRESENT",
+      "detail": "VDSO/vesyscall mapped at ffffffffff600000 perms=r-xp",
+      "target": "VDSO/vesyscall mapped at ffffffffff600000 perms=r-xp",
+      "severity": "INFO",
+      "mitre_ttp": "T0000",
+      "source_module": "elf_hook_scanner",
+      "timestamp_iso": "2026-04-20T10:38:01.329841+00:00",
+      "timestamp_ns": 1776681481329841408,
+      "severity_score": 10,
+      "campaign_id": "HOOK_VDSO_PRESENT",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "HOOK_VDSO_PRESENT",
+        "module": "ELFHook",
+        "severity": "INFO",
+        "title": "VDSO/vesyscall mapped at ffffffffff600000 perms=r-xp",
+        "detail": "VDSO/vesyscall mapped at ffffffffff600000 perms=r-xp",
+        "fix": "Inspect with: readelf -s <binary>; cat /proc/<pid>/maps",
+        "objects": [],
+        "source": "elf_hook_scanner",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 37,
+      "type": "HOOK_SUSPICIOUS_MAPPING",
+      "detail": "Non-system ELF mapped at 003ff000-00400000: /usr/local/bin/python3",
+      "target": "Non-system ELF mapped at 003ff000-00400000: /usr/local/bin/python3",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "elf_hook_scanner",
+      "timestamp_iso": "2026-04-20T10:38:01.329851+00:00",
+      "timestamp_ns": 1776681481329850624,
+      "severity_score": 60,
+      "campaign_id": "HOOK_SUSPICIOUS_MAPPING",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "HOOK_SUSPICIOUS_MAPPING",
+        "module": "ELFHook",
+        "severity": "HIGH",
+        "title": "Non-system ELF mapped at 003ff000-00400000: /usr/local/bin/python3",
+        "detail": "Non-system ELF mapped at 003ff000-00400000: /usr/local/bin/python3",
+        "fix": "Inspect with: readelf -s <binary>; cat /proc/<pid>/maps",
+        "objects": [],
+        "source": "elf_hook_scanner",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 38,
+      "type": "HOOK_SUSPICIOUS_MAPPING",
+      "detail": "Non-system ELF mapped at 2adf40000000-2adf4021c000: /usr/local/lib/libpython3.12.so.1.0",
+      "target": "Non-system ELF mapped at 2adf40000000-2adf4021c000: /usr/local/lib/libpython3.12.so.1.0",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "elf_hook_scanner",
+      "timestamp_iso": "2026-04-20T10:38:01.329859+00:00",
+      "timestamp_ns": 1776681481329859328,
+      "severity_score": 60,
+      "campaign_id": "HOOK_SUSPICIOUS_MAPPING",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "HOOK_SUSPICIOUS_MAPPING",
+        "module": "ELFHook",
+        "severity": "HIGH",
+        "title": "Non-system ELF mapped at 2adf40000000-2adf4021c000: /usr/local/lib/libpython3.12",
+        "detail": "Non-system ELF mapped at 2adf40000000-2adf4021c000: /usr/local/lib/libpython3.12.so.1.0",
+        "fix": "Inspect with: readelf -s <binary>; cat /proc/<pid>/maps",
+        "objects": [],
+        "source": "elf_hook_scanner",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 39,
+      "type": "KALLSYMS_HIDDEN",
+      "detail": "kptr_restrict may be set to 2 or rootkit hid kallsyms",
+      "target": "kptr_restrict may be set to 2 or rootkit hid kallsyms",
+      "severity": "MEDIUM",
+      "mitre_ttp": "T0000",
+      "source_module": "kernel_integrity",
+      "timestamp_iso": "2026-04-20T10:38:01.329868+00:00",
+      "timestamp_ns": 1776681481329867776,
+      "severity_score": 30,
+      "campaign_id": "KALLSYMS_HIDDEN",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "KALLSYMS_HIDDEN",
+        "module": "KernelIntegrity",
+        "severity": "MEDIUM",
+        "title": "/proc/kallsyms is empty/restricted \u2014 kernel symbols hidden",
+        "detail": "kptr_restrict may be set to 2 or rootkit hid kallsyms",
+        "fix": "echo 0 > /proc/sys/kernel/kptr_restrict",
+        "objects": [],
+        "source": "kernel_integrity",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 40,
+      "type": "KPTR_RESTRICT",
+      "detail": "kptr_restrict (0=exposed,2=hidden) = '' (expected 0 or 1)",
+      "target": "kptr_restrict (0=exposed,2=hidden) = '' (expected 0 or 1)",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "kernel_integrity",
+      "timestamp_iso": "2026-04-20T10:38:01.329876+00:00",
+      "timestamp_ns": 1776681481329875712,
+      "severity_score": 60,
+      "campaign_id": "KPTR_RESTRICT",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "KPTR_RESTRICT",
+        "module": "KernelIntegrity",
+        "severity": "HIGH",
+        "title": "kptr_restrict= \u2014 kernel pointers hidden from /proc",
+        "detail": "kptr_restrict (0=exposed,2=hidden) = '' (expected 0 or 1)",
+        "fix": "echo 0 > /proc/sys/kernel/kptr_restrict",
+        "objects": [],
+        "source": "kernel_integrity",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 41,
+      "type": "CR4_SMEP_OK",
+      "detail": "SMEP protection active (no bypass indicators found)",
+      "target": "SMEP protection active (no bypass indicators found)",
+      "severity": "LOW",
+      "mitre_ttp": "T0000",
+      "source_module": "hannah_improvements",
+      "timestamp_iso": "2026-04-20T10:38:01.329886+00:00",
+      "timestamp_ns": 1776681481329886208,
+      "severity_score": 10,
+      "campaign_id": "CR4_SMEP_OK",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "CR4_SMEP_OK",
+        "severity": "LOW",
+        "detail": "SMEP protection active (no bypass indicators found)",
+        "source": "hannah_improvements",
+        "mitre_ttp": "T1068",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 42,
+      "type": "DMA_CHECK_NO_IOMMU",
+      "detail": "no IOMMU present \u2014 DMA firmware implant check not applicable",
+      "target": "no IOMMU present \u2014 DMA firmware implant check not applicable",
+      "severity": "LOW",
+      "mitre_ttp": "T0000",
+      "source_module": "hannah_improvements",
+      "timestamp_iso": "2026-04-20T10:38:01.329895+00:00",
+      "timestamp_ns": 1776681481329894912,
+      "severity_score": 10,
+      "campaign_id": "DMA_CHECK_NO_IOMMU",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "DMA_CHECK_NO_IOMMU",
+        "severity": "LOW",
+        "detail": "no IOMMU present \u2014 DMA firmware implant check not applicable",
+        "source": "hannah_improvements",
+        "mitre_ttp": "T1014",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 43,
+      "type": "KTM_ATOMIC_PPID_ANOMALY",
+      "detail": "ktm_snapshot_detected_3_zero_ppid_procs",
+      "target": "ktm_snapshot_detected_3_zero_ppid_procs",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "hannah_improvements",
+      "timestamp_iso": "2026-04-20T10:38:01.329903+00:00",
+      "timestamp_ns": 1776681481329902592,
+      "severity_score": 60,
+      "campaign_id": "PROC_3",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "KTM_ATOMIC_PPID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "ktm_snapshot_detected_3_zero_ppid_procs",
+        "source": "hannah_improvements",
+        "mitre_ttp": "T1014",
+        "pids": [
+          15,
+          4749,
+          6836
+        ],
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 44,
+      "type": "KTM_ATOMIC_UID_ANOMALY",
+      "detail": "ktm_snapshot_detected_22_root_uid_procs",
+      "target": "ktm_snapshot_detected_22_root_uid_procs",
+      "severity": "HIGH",
+      "mitre_ttp": "T0000",
+      "source_module": "hannah_improvements",
+      "timestamp_iso": "2026-04-20T10:38:01.329916+00:00",
+      "timestamp_ns": 1776681481329916416,
+      "severity_score": 60,
+      "campaign_id": "KTM_ATOMIC_UID_ANOMALY",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "KTM_ATOMIC_UID_ANOMALY",
+        "severity": "HIGH",
+        "detail": "ktm_snapshot_detected_22_root_uid_procs",
+        "source": "hannah_improvements",
+        "mitre_ttp": "T1055.012",
+        "pids": [
+          15,
+          67,
+          69,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          159
+        ],
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    },
+    {
+      "incident_id": 45,
+      "type": "TPM_ATTESTATION_GAP",
+      "detail": "tpm2_tools_not_available_or_no_tpm \u2014 cannot verify boot chain",
+      "target": "tpm2_tools_not_available_or_no_tpm \u2014 cannot verify boot chain",
+      "severity": "MEDIUM",
+      "mitre_ttp": "T1014",
+      "source_module": "grifter_improvements",
+      "timestamp_iso": "2026-04-20T10:38:01.329925+00:00",
+      "timestamp_ns": 1776681481329925120,
+      "severity_score": 30,
+      "campaign_id": "TPM_ATTESTATION_GAP",
+      "chain_of_custody": {
+        "kernel": "4.4.0",
+        "hostname": "modal",
+        "detector_binary": "sha256:d9bbd920cced4910",
+        "detector_config": "sha256:42114d1b58824132",
+        "platform": "Linux x86_64"
+      },
+      "finding": {
+        "type": "TPM_ATTESTATION_GAP",
+        "severity": "MEDIUM",
+        "detail": "tpm2_tools_not_available_or_no_tpm \u2014 cannot verify boot chain",
+        "source": "grifter_improvements",
+        "mitre_ttp": "T1014",
+        "note": "TPM PCR quote recommended before trusting detection results",
+        "detector_binary_hash": "sha256:08c245737bd76c5dbc07e659fbd22e2604de3157d3885f01370c47fbc4e0290a"
+      }
+    }
+  ]
+}

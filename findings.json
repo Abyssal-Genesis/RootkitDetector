@@ -1,0 +1,184 @@
+{
+  "scan_time": "2026-04-20T07:43:32.430002",
+  "total_alerts": 6,
+  "critical": 2,
+  "alerts": [
+    {
+      "type": "CORRELATED",
+      "combined_score": 100,
+      "title": "5 related anomalies on global",
+      "detail": "Types: KALLSYMS_HIDDEN, HOOK_VDSO_PRESENT, KPTR_RESTRICT, HOOK_SUSPICIOUS_MAPPING",
+      "related": [
+        {
+          "type": "HOOK_VDSO_PRESENT",
+          "module": "ELFHook",
+          "severity": "INFO",
+          "title": "VDSO/vesyscall mapped at ffffffffff600000 perms=r-xp",
+          "detail": "VDSO/vesyscall mapped at ffffffffff600000 perms=r-xp",
+          "fix": "Inspect with: readelf -s <binary>; cat /proc/<pid>/maps",
+          "objects": []
+        },
+        {
+          "type": "HOOK_SUSPICIOUS_MAPPING",
+          "module": "ELFHook",
+          "severity": "HIGH",
+          "title": "Non-system ELF mapped at 003ff000-00400000: /usr/local/bin/python3",
+          "detail": "Non-system ELF mapped at 003ff000-00400000: /usr/local/bin/python3",
+          "fix": "Inspect with: readelf -s <binary>; cat /proc/<pid>/maps",
+          "objects": []
+        },
+        {
+          "type": "HOOK_SUSPICIOUS_MAPPING",
+          "module": "ELFHook",
+          "severity": "HIGH",
+          "title": "Non-system ELF mapped at 2adb53600000-2adb5381c000: /usr/local/lib/libpython3.12",
+          "detail": "Non-system ELF mapped at 2adb53600000-2adb5381c000: /usr/local/lib/libpython3.12.so.1.0",
+          "fix": "Inspect with: readelf -s <binary>; cat /proc/<pid>/maps",
+          "objects": []
+        },
+        {
+          "type": "KALLSYMS_HIDDEN",
+          "module": "KernelIntegrity",
+          "severity": "MEDIUM",
+          "title": "/proc/kallsyms is empty/restricted \u2014 kernel symbols hidden",
+          "detail": "kptr_restrict may be set to 2 or rootkit hid kallsyms",
+          "fix": "echo 0 > /proc/sys/kernel/kptr_restrict",
+          "objects": []
+        },
+        {
+          "type": "KPTR_RESTRICT",
+          "module": "KernelIntegrity",
+          "severity": "HIGH",
+          "title": "kptr_restrict= \u2014 kernel pointers hidden from /proc",
+          "detail": "kptr_restrict (0=exposed,2=hidden) = '' (expected 0 or 1)",
+          "fix": "echo 0 > /proc/sys/kernel/kptr_restrict",
+          "objects": []
+        }
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "type": "SINGLE",
+      "combined_score": 80,
+      "title": "Hidden process PID 1572",
+      "detail": "cmdline=unknown",
+      "related": [
+        {
+          "type": "HIDDEN_PROCESS",
+          "module": "LinuxProcess",
+          "severity": "CRITICAL",
+          "title": "Hidden process PID 1572",
+          "detail": "cmdline=unknown",
+          "pid": 1572,
+          "fix": "Run 'cat /proc/PID/status' \u2014 if inaccessible, process may be DKOM-hidden",
+          "objects": [
+            "pid:1572",
+            "unknown"
+          ]
+        }
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "type": "CORRELATED",
+      "combined_score": 60,
+      "title": "2 related anomalies on pid:69",
+      "detail": "Types: PROCESS_ANOMALY",
+      "related": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "MEDIUM",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Orphan process with PPid=1 but name='supervisord' \u2014 may be a detached backdoor",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ]
+        },
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 69 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisord-user.con",
+          "pid": 69,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:69",
+            "supervisord"
+          ]
+        }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "SINGLE",
+      "combined_score": 40,
+      "title": "PID 67 (supervisord) \u2014 supervisord",
+      "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+      "related": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 67 (supervisord) \u2014 supervisord",
+          "detail": "Suspicious cmdline pattern matched 'python.*-c': /usr/local/bin/python /usr/local/bin/supervisord -c /etc/zo/supervisor.conf ",
+          "pid": 67,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:67",
+            "supervisord"
+          ]
+        }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "SINGLE",
+      "combined_score": 40,
+      "title": "PID 1568 (sh) \u2014 sh",
+      "detail": "Suspicious cmdline pattern matched 'tor': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+      "related": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 1568 (sh) \u2014 sh",
+          "detail": "Suspicious cmdline pattern matched 'tor': sh -c env -i \\\n  PATH=\"${PATH:-/usr/local/bin:/usr/bin:/bin}\" \\\n  HOME=\"${HOME:-",
+          "pid": 1568,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:1568",
+            "sh"
+          ]
+        }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "SINGLE",
+      "combined_score": 40,
+      "title": "PID 1570 (python3) \u2014 python3",
+      "detail": "Suspicious cmdline pattern matched 'tor': python3 rootkit_detector.py ",
+      "related": [
+        {
+          "type": "PROCESS_ANOMALY",
+          "module": "LinuxProcess",
+          "severity": "HIGH",
+          "title": "PID 1570 (python3) \u2014 python3",
+          "detail": "Suspicious cmdline pattern matched 'tor': python3 rootkit_detector.py ",
+          "pid": 1570,
+          "fix": "Inspect with 'cat /proc/<pid>/status' and 'ls -la /proc/<pid>/'",
+          "objects": [
+            "pid:1570",
+            "python3"
+          ]
+        }
+      ],
+      "severity": "HIGH"
+    }
+  ]
+}
