@@ -1,0 +1,7 @@
+findings_improved.json
+findings.json
+__pycache__/
+*.pyc
+lstm_model/dataset/
+*.pt
+
