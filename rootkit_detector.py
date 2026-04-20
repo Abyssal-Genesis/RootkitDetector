@@ -201,6 +201,11 @@ def run_critiques():
     from expert_critiques import run_all_critiques
     run_all_critiques()
 
+def safe_sys_exit(code: int):
+    """Force-exit with explicit code so wrapper always sees real status."""
+    print(f"[EXIT] code={code}", flush=True)
+    sys.exit(code & 0xFF)
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Rootkit Detector — Classical + LSTM')
     parser.add_argument('--fast', action='store_true', help='Classical only, no LSTM')
@@ -219,8 +224,8 @@ if __name__ == '__main__':
         findings, severity = run_full_scan(model)
 
         if severity['CRITICAL'] > 0:
-            sys.exit(2)
+            safe_sys_exit(2)
         elif severity['HIGH'] > 0:
-            sys.exit(1)
+            safe_sys_exit(1)
         else:
-            sys.exit(0)
+            safe_sys_exit(0)
